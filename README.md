@@ -1,5 +1,4 @@
 <div align="center">
-  
   <img width="220" alt="SMRTS Logo" src="https://github.com/user-attachments/assets/9ef782d3-3939-4622-82e6-4c8773d380e3" />
   <h1>SMRTS — Smart Maintenance Request & Tracking System</h1>
   <p><strong>v3.0 &nbsp;·&nbsp; Java Swing Desktop Application</strong></p>
@@ -95,6 +94,11 @@ The system supports **four user roles** (Admin, Technician, Staff/Technician Por
 
 ### 👤 User Portal
 <img width="800" src="https://github.com/user-attachments/assets/327fb930-1211-40f6-9d91-6b3e943c1bc7" alt="User Portal"/>
+
+<br/><br/>
+
+### 🛠️ Technician Portal
+<img width="1919" height="1015" alt="Technician Portal" src="https://github.com/user-attachments/assets/11b1cc74-7056-41bb-b2dc-fbc5018b8ad5" />
 
 </div>
 
