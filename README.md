@@ -4,10 +4,6 @@
   <p><strong>v3.0 · Java Swing Desktop Application</strong></p>
 </div>
 
-# SMRTS — Smart Maintenance Request & Tracking System
-
-### v3.0 · Java Swing Desktop Application
-
 [![Java](https://img.shields.io/badge/Java-17-orange?style=flat-square&logo=java)](https://www.oracle.com/java/)
 [![Maven](https://img.shields.io/badge/Maven-3.x-red?style=flat-square&logo=apachemaven)](https://maven.apache.org/)
 [![MySQL](https://img.shields.io/badge/MySQL-8.x-blue?style=flat-square&logo=mysql)](https://www.mysql.com/)
