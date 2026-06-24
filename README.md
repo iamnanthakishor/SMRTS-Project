@@ -566,8 +566,6 @@ This project was developed as a group semester assignment by:
 | 3 | **Danushan - PE/2023/040** | Maintenance Request System · User Portal |
 | 4 | **Nanthakishor - PE/2023/044** | Technician Management · AI Chatbot · UI Styling |
 
-> *Names are placeholders — edit before publishing.*
-
 ---
 
 ## License
