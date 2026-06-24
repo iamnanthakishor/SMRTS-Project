@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="src/main/resources/logo.png" alt="SMRTS Logo" width="120"/>
+<img width="1024" height="1024" alt="logo" src="https://github.com/user-attachments/assets/9ef782d3-3939-4622-82e6-4c8773d380e3" />
 
 # SMRTS — Smart Maintenance Request & Tracking System
 
