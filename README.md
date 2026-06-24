@@ -66,11 +66,17 @@ SMRTS is a semester group project — a full-featured **maintenance request trac
 
 | Login Screen | Admin Dashboard | Maintenance Requests |
 |---|---|---|
-| `screenshot_login.png` | `screenshot_dashboard.png` | `screenshot_requests.png` |
+| `<img width="1132" height="714" alt="Screenshot 2026-06-24 221023" src="https://github.com/user-attachments/assets/f0b1344a-dbbc-4dc4-b33a-865e33af4d9e" />
+` | `<img width="1919" height="1016" alt="Screenshot 2026-06-24 221044" src="https://github.com/user-attachments/assets/faecd4c2-ebc8-4b7b-bd26-ec589c4b6cff" />
+` | `<img width="1917" height="1019" alt="Screenshot 2026-06-24 221059" src="https://github.com/user-attachments/assets/a7dbc947-8a3b-4d11-8c3b-104c913134d9" />
+` |
 
 | Reports | AI Chatbot | User Portal |
 |---|---|---|
-| `screenshot_reports.png` | `screenshot_chatbot.png` | `screenshot_portal.png` |
+| `<img width="1919" height="1022" alt="Screenshot 2026-06-24 221138" src="https://github.com/user-attachments/assets/c91cc3fd-f2a1-4af9-a5d7-3a68fcc899f2" />
+` | `<img width="1919" height="1021" alt="Screenshot 2026-06-24 221152" src="https://github.com/user-attachments/assets/89261dc9-4be1-4528-8df2-9b952db1a69b" />
+` | `<img width="1919" height="1019" alt="Screenshot 2026-06-24 221223" src="https://github.com/user-attachments/assets/327fb930-1211-40f6-9d91-6b3e943c1bc7" />
+` |
 
 ---
 
