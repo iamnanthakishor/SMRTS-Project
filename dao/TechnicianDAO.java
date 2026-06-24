@@ -24,21 +24,27 @@ public class TechnicianDAO {
         String sql =
                 """
                 INSERT INTO technicians
-                (name,contact_no,email,department,status)
-                VALUES(?,?,?,?,?)
+                (name,contact_no,email,username,department,status)
+                VALUES(?,?,?,?,?,?)
                 """;
 
         try(Connection conn=DBConnection.getConnection();
             PreparedStatement pst=
-                    conn.prepareStatement(sql)){
+                    conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)){
 
             pst.setString(1,t.getName());
             pst.setString(2,t.getContactNo());
             pst.setString(3,t.getEmail());
-            pst.setString(4,t.getDepartment());
-            pst.setString(5,t.getStatus());
+            pst.setString(4,t.getUsername());   // may be null for manual entries
+            pst.setString(5,t.getDepartment());
+            pst.setString(6,t.getStatus() != null ? t.getStatus() : "Available");
 
             pst.executeUpdate();
+
+            // Capture the generated technician_id so callers can link it
+            try (ResultSet keys = pst.getGeneratedKeys()) {
+                if (keys.next()) t.setTechnicianId(keys.getInt(1));
+            }
 
             return true;
 
@@ -100,6 +106,34 @@ public class TechnicianDAO {
 
     }
 
+
+    /*=========================================
+                GET BY USERNAME
+     =========================================*/
+
+    /**
+     * Looks up a technician by their system username stored in the
+     * optional `username` column (added by patch_technician_accounts.sql).
+     * Returns null — rather than throwing — if the column does not yet
+     * exist, so callers can fall back gracefully.
+     */
+    public Technician getByUsername(String username) {
+        String sql = "SELECT * FROM technicians WHERE username = ?";
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement pst = conn.prepareStatement(sql)) {
+            pst.setString(1, username);
+            try (ResultSet rs = pst.executeQuery()) {
+                if (rs.next()) return mapRow(rs);
+            }
+        } catch (SQLException e) {
+            // If column doesn't exist yet, silently return null
+            if (e.getMessage() != null && e.getMessage().toLowerCase().contains("unknown column")) {
+                return null;
+            }
+            logger.log(Level.WARNING, "getByUsername failed", e);
+        }
+        return null;
+    }
 
 
     /*=========================================
@@ -259,6 +293,7 @@ public class TechnicianDAO {
                 name=?,
                 contact_no=?,
                 email=?,
+                username=?,
                 department=?,
                 status=?
 
@@ -277,10 +312,11 @@ public class TechnicianDAO {
             pst.setString(1,t.getName());
             pst.setString(2,t.getContactNo());
             pst.setString(3,t.getEmail());
-            pst.setString(4,t.getDepartment());
-            pst.setString(5,t.getStatus());
+            pst.setString(4,t.getUsername());
+            pst.setString(5,t.getDepartment());
+            pst.setString(6,t.getStatus());
 
-            pst.setInt(6,
+            pst.setInt(7,
                     t.getTechnicianId());
 
 
@@ -574,6 +610,10 @@ public class TechnicianDAO {
                 rs.getString("email")
 
         );
+
+
+        // username column added by patch — read defensively
+        try { t.setUsername(rs.getString("username")); } catch (SQLException ignored) {}
 
 
         t.setDepartment(
