@@ -544,10 +544,10 @@ This project was developed as a group semester assignment by:
 
 | # | Name | Role / Contribution |
 |---|---|---|
-| 1 | **Alice Johnson** | Project Lead · Admin Dashboard · Login Form |
-| 2 | **Brian Fernando** | Database Design · DAO Layer · Reports Module |
-| 3 | **Chamari Perera** | Maintenance Request System · User Portal |
-| 4 | **Dinesh Kumara** | Technician Management · AI Chatbot · UI Styling |
+| 1 | **Elankeeran - PE/2023/002** | Project Lead · Admin Dashboard · Login Form |
+| 2 | **Kithusan - PE/2023/013** | Database Design · DAO Layer · Reports Module |
+| 3 | **Danushan - PE/2023/040** | Maintenance Request System · User Portal |
+| 4 | **Nanthakishor - PE/2023/044** | Technician Management · AI Chatbot · UI Styling |
 
 > *Names are placeholders — edit before publishing.*
 
