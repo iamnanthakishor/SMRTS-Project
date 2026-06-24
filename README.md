@@ -1,6 +1,8 @@
 <div align="center">
-
-<img width="1024" height="1024" alt="logo" src="https://github.com/user-attachments/assets/9ef782d3-3939-4622-82e6-4c8773d380e3" />
+  <img width="220" alt="SMRTS Logo" src="https://github.com/user-attachments/assets/9ef782d3-3939-4622-82e6-4c8773d380e3" />
+  <h1>SMRTS — Smart Maintenance Request & Tracking System</h1>
+  <p><strong>v3.0 · Java Swing Desktop Application</strong></p>
+</div>
 
 # SMRTS — Smart Maintenance Request & Tracking System
 
